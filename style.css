@@ -8,7 +8,9 @@ canvas {
     width: 10px;
     height: 10px;
 }
-tr{
+table{
+  margin-left: 50px;
+  margin-top: 50px;
 
 }
 td{
