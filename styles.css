@@ -1,0 +1,17 @@
+* {
+   margin: 0;
+   padding: 0;
+
+}
+canvas {
+    display:block;
+    width: 1px;
+    height: 1px;
+}
+tr{
+
+}
+td{
+  width: 1px;
+  height: 1px;
+}
