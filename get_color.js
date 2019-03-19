@@ -39,12 +39,12 @@ export function getData() {
         if (b.length == 1)
           b = "0" + b;
         newlist.push( "#" + r + g + b);
-        var j, x, i;
+        var j, t, i;
         for (i = newlist.length - 1; i > 0; i--) {
             j = Math.floor(Math.random() * (i + 1));
-            x = newlist[i];
+            t = newlist[i];
             newlist[i] = newlist[j];
-            newlist[j] = x;
+            newlist[j] = t;
         }
         //imageData = data;
         // list.push('['+data+']');
