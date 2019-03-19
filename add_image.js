@@ -1,6 +1,13 @@
+import { getData } from './get_color.js';
+
 var img =document.getElementById('image')
 
 var w= 0
+
+var l = [];
+var newlist = getData(l);
+console.log("New list: ", newlist, newlist.length);
+
 while (w<=img.width)
 {
 

@@ -1,9 +1,11 @@
 
-function getData(list) {
+export function getData() {
+  console.log("Getting data...");
 
   var img = new Image();
   img.crossOrigin = "anonymous";
   img.onload = function() {
+    var newlist = [];
     var canvas = document.createElement('canvas');
     var context = canvas.getContext('2d');
     var canvas2 = document.createElement('canvas');
@@ -44,23 +46,54 @@ function getData(list) {
             newlist[j] = x;
         }
         //imageData = data;
-        list.push('['+data+']');
+        // list.push('['+data+']');
         y= y+1;
       }
       x=x+1;
       y=0;
-
     }
+    console.log("Done parsing");
 
-
-
-    return newlist;
+    console.log("Nnew list: ", newlist.slice(500, 1000));
+    console.log("Shuffling and redrawing pixels..");
+    var w = 0;
+    while (w<=100)
+    {
+      var h=0
+      var row = document.createElement("tr")
+      while (h<=100)
+      {
+        var canvas = document.createElement("canvas");
+        canvas.width =[1]
+        canvas.height= [1]
+        var column = document.createElement("td")
+        column.width= [1]
+        column.height= [1]
+        var n=0
+        canvas.id = "canvas"+n;
+        var ctx = canvas.getContext("2d");
+        var color= newlist[w*100 + h];
+        console.log("color: ", color, w*100 + h);
+        ctx.fillStyle = color;
+        ctx.fillRect(0, 0, 1, 1);
+        column.appendChild(canvas);
+        row.appendChild(column)
+        // newlist.shift();
+        h=h+1
+        n=n+1
+      }
+      var table =document.getElementById('table')
+      table.appendChild(row)
+      w= w+1
+    }
+    console.log("Done shuffling");
   }
+
   img.src = "image.png";
 
 }
-var list= [];
-var newlist=[];
+// var list= [];
+//var newlist=[];
+//
 
-console.log(newlist);
-getData(list);
+getData();
