@@ -8,6 +8,7 @@ export function getData() {
     var newlist = [];
     var canvas = document.createElement('canvas');
     var context = canvas.getContext('2d');
+    canvas.id= 'main_image';
     var canvas2 = document.createElement('canvas');
     var context2 = canvas.getContext('2d');
     canvas.width = img.width;
@@ -63,20 +64,20 @@ export function getData() {
       var row = document.createElement("tr")
       while (h<=100)
       {
-        var canvas = document.createElement("canvas");
-        canvas.width =[1]
-        canvas.height= [1]
+        var canvassmall = document.createElement("canvas");
+        canvassmall.width =[1]
+        canvassmall.height= [1]
         var column = document.createElement("td")
         column.width= [1]
         column.height= [1]
         var n=0
-        canvas.id = "canvas"+n;
-        var ctx = canvas.getContext("2d");
+        canvassmall.id = "canvas"+n;
+        var ctx = canvassmall.getContext("2d");
         var color= newlist[w*100 + h];
         console.log("color: ", color, w*100 + h);
         ctx.fillStyle = color;
         ctx.fillRect(0, 0, 1, 1);
-        column.appendChild(canvas);
+        column.appendChild(canvassmall);
         row.appendChild(column)
         // newlist.shift();
         h=h+1

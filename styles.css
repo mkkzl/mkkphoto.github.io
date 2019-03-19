@@ -8,10 +8,22 @@ canvas {
     width: 1px;
     height: 1px;
 }
-tr{
+#main_image{
+  margin-left: 50px;
+  margin-top: 50px;
+}
+img{
+  margin-left: 50px;
+  margin-top: 50px;
+}
+table{
+  border-spacing: 0px;
+  table-layout: fixed;
+  margin-left: 50px;
+  margin-top: 50px;
 
 }
-td{
+/*td{
   width: 1px;
   height: 1px;
 }
