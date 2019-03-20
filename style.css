@@ -5,15 +5,7 @@
 }
 canvas {
     display:block;
-    width: 10px;
-    height: 10px;
-}
-table{
-  margin-left: 50px;
-  margin-top: 50px;
+    margin-top: 50px;
+    margin-left: 50px;
 
-}
-td{
-  width: 10px;
-  height: 10px;
 }

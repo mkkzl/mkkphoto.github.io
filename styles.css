@@ -5,26 +5,34 @@
 }
 canvas {
     display:block;
-    width: 1px;
-    height: 1px;
+    margin-left: 25px;
+    margin-top: 50px;
 }
-#main_image{
-  margin-left: 50px;
-  margin-top: 50px;
-}
+
 img{
   margin-left: 50px;
   margin-top: 50px;
-  /*visibility: hidden;*/
+  visibility: hidden;
 }
-table{
-  border-spacing: 0px;
-  table-layout: fixed;
-  margin-left: 50px;
-  margin-top: 50px;
+#image1{
+  float: left;
+}
+#newimage{
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.canvas__container {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
 
-}
-/*td{
-  width: 1px;
-  height: 1px;
+.canvas__mirror {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
