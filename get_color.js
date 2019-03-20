@@ -40,13 +40,20 @@ export function getData() {
       x=x+1;
       y=0;
     }
-    var j, x, i;
+    /*var j, x, i;
     for (i = newlist.length - 1; i > 0; i--) {
         j = Math.floor(Math.random() * (i + 1));
         x = newlist[i];
         newlist[i] = newlist[j];
         newlist[j] = x;
-    }
+    }*/
+    const hexSorter = require('hexSorter');
+    const log = console.log;
+
+
+    log("bright", hexSorter.mostBrightColor(newlist, 'BT709'));
+    log("saturated", hexSorter.mostSaturatedColor(newlist));
+    log("mix", hexSorter.colorMixer('#000000', '#FF0000', 65));
     console.log("Done parsing");
 
     console.log("Shuffling and redrawing pixels..");
@@ -73,11 +80,11 @@ export function getData() {
       w= w+1
     }
     console.log("Done shuffling");
-  
+
 
   }
 
-  img.src = "image_lg.png";
+  img.src = "paris.jpg";
 
 }
 
