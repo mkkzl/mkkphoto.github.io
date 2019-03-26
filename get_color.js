@@ -78,7 +78,7 @@ export function getData() {
 
   }
 
-  img.src = "florence_postcard.jpg";
+  img.src = "wall46.jpg";
 
 }
 
